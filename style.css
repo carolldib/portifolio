@@ -47,8 +47,9 @@ body {
   z-index: 2;
   display: flex;
   justify-content: center;
-  gap: 24px;
-  padding: 25px 20px;
+  align-items: center;
+  gap: 20px;
+  padding: 24px 20px;
   flex-wrap: wrap;
 }
 
@@ -56,22 +57,34 @@ body {
   color: #ffffff;
   text-decoration: none;
   font-weight: 500;
+  font-size: 0.95rem;
+}
+
+/* ===================== BOTÃO DE IDIOMA ===================== */
+
+.lang-switch {
   position: relative;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 10px;
 }
 
-.hero-nav a::after {
-  content: "";
-  width: 0;
-  height: 2px;
-  background-color: #d1d5db;
-  position: absolute;
-  left: 0;
-  bottom: -6px;
-  transition: width 0.3s;
+.lang-switch button {
+  background: transparent;
+  border: 1px solid #fff;
+  color: #fff;
+  padding: 5px 10px;
+  font-size: 12px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: all 0.3s ease;
 }
 
-.hero-nav a:hover::after {
-  width: 100%;
+.lang-switch button:hover {
+  background: #fff;
+  color: #000;
 }
 
 /* ===================== HERO CONTENT ===================== */
@@ -96,14 +109,14 @@ body {
 
 .hero-content span {
   font-size: 1.2rem;
-  margin-bottom: 18px;
+  margin-bottom: 16px;
   color: #e5e7eb;
 }
 
 .hero-content p {
   max-width: 600px;
   font-size: 1rem;
-  margin-bottom: 30px;
+  margin-bottom: 28px;
 }
 
 .hero-button {
@@ -119,33 +132,6 @@ body {
 .hero-button:hover {
   background-color: #e5e7eb;
   transform: translateY(-2px);
-}
-
-/* ===================== BOTÃO DE IDIOMA ===================== */
-
-.lang-switch {
-  position: absolute;
-  top: 20px;
-  left: 20px;
-  display: flex;
-  gap: 8px;
-  z-index: 10;
-}
-
-.lang-switch button {
-  background: transparent;
-  border: 1px solid #fff;
-  color: #fff;
-  padding: 4px 10px;
-  font-size: 12px;
-  cursor: pointer;
-  border-radius: 4px;
-  transition: all 0.3s ease;
-}
-
-.lang-switch button:hover {
-  background: #fff;
-  color: #000;
 }
 
 /* ================================================= */
@@ -177,23 +163,6 @@ body {
   color: #ffffff;
   text-decoration: none;
   font-weight: 500;
-  position: relative;
-}
-
-.nav a::after {
-  content: "";
-  width: 0;
-  height: 2px;
-  background-color: #d1d5db;
-  position: absolute;
-  left: 0;
-  bottom: -4px;
-  transition: width 0.3s;
-}
-
-.nav a:hover::after,
-.nav a.active::after {
-  width: 100%;
 }
 
 /* ================================================= */
@@ -324,83 +293,21 @@ body {
   background: #e5e7eb;
 }
 
-/* ===================== ANIMAÇÃO ===================== */
-
-.section,
-.project,
-.lang-card,
-.skills li {
-  opacity: 0;
-  transform: translateY(25px);
-  transition: 0.6s;
-}
-
-.show {
-  opacity: 1;
-  transform: translateY(0);
-}
-
 /* ===================== MOBILE ===================== */
 
 @media (max-width: 768px) {
-  .hero-content h1 { font-size: 2.2rem; }
-  .about { flex-direction: column; text-align: center; }
-}
-/* =======================
-   HERO RESPONSIVO (MOBILE)
-======================= */
-@media (max-width: 768px) {
-
-  /* HERO */
-  .hero {
-    min-height: 100vh;
-  }
-
-  /* MENU DO TOPO */
-  .hero-nav {
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 14px;
-    padding: 18px 12px;
-  }
-
-  .hero-nav a {
-    font-size: 0.95rem;
-  }
-
-  /* BOTÃO DE IDIOMA */
-  .lang-switch {
-    position: relative;
-    top: auto;
-    left: auto;
-    margin: 10px auto 0;
-    justify-content: center;
-  }
-
-  /* CONTEÚDO CENTRAL */
-  .hero-content {
-    padding: 20px;
-  }
 
   .hero-content h1 {
     font-size: 2.2rem;
   }
 
-  .hero-content span {
-    font-size: 1.1rem;
-    margin-bottom: 12px;
-  }
-
   .hero-content p {
     font-size: 0.95rem;
-    line-height: 1.5;
     max-width: 90%;
   }
 
-  /* BOTÃO */
-  .hero-button {
-    padding: 12px 28px;
-    font-size: 0.95rem;
+  .about {
+    flex-direction: column;
+    text-align: center;
   }
 }

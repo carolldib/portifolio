@@ -47,7 +47,11 @@ const translations = {
 
     /* CONTACT */
     contactTitle: "Contato",
-    contactSubtitle: "Entre em contato"
+    contactSubtitle: "Entre em contato",
+
+    whatsapp: "WhatsApp",
+    email: "Email",
+    availableAfterContract: "Disponível após contrato"
   },
 
   en: {
@@ -94,7 +98,11 @@ const translations = {
 
     /* CONTACT */
     contactTitle: "Contact",
-    contactSubtitle: "Get in touch"
+    contactSubtitle: "Get in touch",
+
+    whatsapp: "WhatsApp",
+    email: "Email",
+    availableAfterContract: "Available after contract"
   }
 };
 
